@@ -74,8 +74,9 @@ h2 {
 
 #date {
     background:white;
-    padding:20px;
-    width:190px;
+    padding-top:15px;
+    padding-bottom:10px;
+    width:220px;
     height:0px;
     float:right;
     display:inline-block;
