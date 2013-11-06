@@ -1,0 +1,52 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+   
+     <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="container">
+        <div id="header">
+            <h1>The Best Songs of 2013</h1>
+            <asp:Image class="_img" ID="Image1" runat="server" ImageUrl="~/Images/2013sofar.jpg" />
+        </div>
+        
+        <div id="menu">
+            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
+                <LevelMenuItemStyles>
+                    <asp:MenuItemStyle CssClass="section-1" />
+
+
+                </LevelMenuItemStyles>
+            </asp:Menu>
+
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false" />
+       </div>
+
+        <div id="date">
+                <asp:Label ID="lbl_date" runat="server" Text=""></asp:Label>
+        </div>
+        
+        <div id="content">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id="footer">
+             Copyright &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> Adam Stueckrath - 6k183: Software Design &amp; Development
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>
