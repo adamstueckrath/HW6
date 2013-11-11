@@ -31,6 +31,7 @@
     
     <br />
     <br />
+   
     <asp:DetailsView 
         ID="DetailsView1" 
         runat="server" 
@@ -49,6 +50,10 @@
         HeaderStyle-CssClass="header"
         >
 
+<CommandRowStyle CssClass="command"></CommandRowStyle>
+
+<FieldHeaderStyle CssClass="fieldheader"></FieldHeaderStyle>
+
         <Fields>
             <asp:BoundField DataField="song" HeaderText="Song" SortExpression="song" />
             <asp:BoundField DataField="album" HeaderText="Album" SortExpression="album" />
@@ -58,6 +63,8 @@
             <asp:BoundField DataField="link" HeaderText="Link" SortExpression="link" />
             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
         </Fields>
+
+<HeaderStyle CssClass="header"></HeaderStyle>
     </asp:DetailsView>
     <br />
 </asp:Content>

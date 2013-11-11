@@ -8,18 +8,26 @@
     
     <br />
 
+    &nbsp;&nbsp;&nbsp;
+
     <%If Not IsPostBack Then%>
 
         <asp:Label ID="lbl_searchbar" runat="server" Text="Search for a song by name: "></asp:Label>
         <asp:TextBox ID="tbsearch" runat="server" BorderStyle="Inset"></asp:TextBox>
+
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbsearch" ErrorMessage="Please enter a song name."></asp:RequiredFieldValidator>
 
     <br />
     <br />
 
     <% Else%>
 
+        &nbsp;&nbsp;&nbsp;
+
         <asp:Label ID="lbl_searchbar2" runat="server" Text="Search for another song by name: "></asp:Label>
         <asp:TextBox ID="tbsearch2" runat="server" BorderStyle="Inset"></asp:TextBox>
+    
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="tbsearch2" ErrorMessage="Please enter a song name."></asp:RequiredFieldValidator>
     
     <br />
     <br />  
@@ -35,7 +43,6 @@
         CssClass="cssgridview"
         >
         <Columns>
-            <asp:BoundField DataField="songID" HeaderText="songID" InsertVisible="False" ReadOnly="True" SortExpression="songID" />
             <asp:BoundField DataField="song" HeaderText="song" SortExpression="song" />
             <asp:BoundField DataField="album" HeaderText="album" SortExpression="album" />
             <asp:BoundField DataField="artist" HeaderText="artist" SortExpression="artist" />
