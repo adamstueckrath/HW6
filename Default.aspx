@@ -6,8 +6,6 @@
  
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
         
-    <p>
-</p>
 <asp:SqlDataSource ID="SongsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:cs_SongWebSite %>" SelectCommand="SELECT * FROM [Table]" DeleteCommand="DELETE FROM [Table] WHERE [songID] = @songID" InsertCommand="INSERT INTO [Table] ([song], [album], [artist], [releasedate], [notes], [link]) VALUES (@song, @album, @artist, @releasedate, @notes, @link)" UpdateCommand="UPDATE [Table] SET [song] = @song, [album] = @album, [artist] = @artist, [releasedate] = @releasedate, [notes] = @notes, [link] = @link WHERE [songID] = @songID">
     <DeleteParameters>
         <asp:Parameter Name="songID" Type="Int32" />
@@ -30,9 +28,23 @@
         <asp:Parameter Name="songID" Type="Int32" />
     </UpdateParameters>
     </asp:SqlDataSource>
-    <br />
-    <br />
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="songID" DataSourceID="SongsDataSource" Width="1075px">
+
+    <asp:GridView 
+        ID="GridView1" 
+        runat="server" 
+        HorizontalAlign="Center"
+        AllowPaging="True" 
+        AllowSorting="True" 
+        AutoGenerateColumns="False" 
+        DataKeyNames="songID" 
+        DataSourceID="SongsDataSource"
+        Width="1075px"
+        PageSize="10"
+        Gridlines="None"
+        CssClass="cssgridview"
+        PagerStyle-CssClass="pgr"
+        >
+
         <Columns>
             <asp:BoundField DataField="song" HeaderText="Song" SortExpression="song" />
             <asp:BoundField DataField="artist" HeaderText="Artist" SortExpression="artist" />

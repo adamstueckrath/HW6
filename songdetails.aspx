@@ -30,8 +30,24 @@
     </asp:SqlDataSource>
     
     <br />
+    <asp:Label ID="lbl_delSong" runat="server" Text="Label" Visible="False"></asp:Label>
     <br />
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="songID" DataSourceID="SqlDataSource1" Height="50px" Width="1031px">
+    <asp:DetailsView 
+        ID="DetailsView1" 
+        runat="server" 
+        HorizontalAlign="Center"
+        AutoGenerateRows="False" 
+        DataKeyNames="songID" 
+        DataSourceID="SqlDataSource1" 
+        Height="50px" 
+        Width="634px"
+        HeaderText="Song Details"
+        CssClass="cssdetailsview"
+        FieldHeaderStyle-CssClass="fieldheader"
+        CommandRowStyle-CssClass="command"
+        HeaderStyle-CssClass="header"
+
+        >
         <Fields>
             <asp:BoundField DataField="song" HeaderText="Song" SortExpression="song" />
             <asp:BoundField DataField="album" HeaderText="Album" SortExpression="album" />
@@ -39,7 +55,7 @@
             <asp:BoundField DataField="releasedate" HeaderText="Release Date" SortExpression="releasedate" />
             <asp:BoundField DataField="notes" HeaderText="Description" SortExpression="notes" />
             <asp:BoundField DataField="link" HeaderText="Link" SortExpression="link" />
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
         </Fields>
     </asp:DetailsView>
     <br />

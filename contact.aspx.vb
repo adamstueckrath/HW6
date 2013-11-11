@@ -9,7 +9,7 @@ Partial Class contact
         Dim msg As New MailMessage
         Dim client As New SmtpClient
 
-        msg.To.Add("michael-colbert@uiowa.edu")  'destination email address  
+        msg.To.Add("michael-colbert@uiowa.edu") 'destination email address  
         msg.From = New MailAddress(senderAddress.Text)  'get the address from the textbox
         msg.Subject = "web contact form test"  'set the message subject line
         msg.Body = senderMessage.Text  'get the message body from the textbox

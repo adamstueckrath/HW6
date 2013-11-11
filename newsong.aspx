@@ -31,7 +31,24 @@
     
     <br />
     <br />
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="songID" DataSourceID="SqlDataSource1" Height="50px" Width="1031px" DefaultMode="Insert">
+    <asp:DetailsView 
+        ID="DetailsView1" 
+        runat="server" 
+        HorizontalAlign="Center"
+        AutoGenerateRows="False" 
+        DataKeyNames="songID" 
+        DataSourceID="SqlDataSource1" 
+        Height="50px" 
+        Width="442px" 
+        DefaultMode="Insert"
+        HeaderText="Add a New Song"
+        CssClass="cssdetailsview"
+        FieldHeaderStyle-CssClass="fieldheader"
+        ItemStyle-CssClass="item"
+        CommandRowStyle-CssClass="command"
+        HeaderStyle-CssClass="header"
+        >
+
         <Fields>
             <asp:BoundField DataField="song" HeaderText="Song" SortExpression="song" />
             <asp:BoundField DataField="album" HeaderText="Album" SortExpression="album" />

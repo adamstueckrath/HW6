@@ -12,10 +12,16 @@ p {
 
 ._img {
     float:right;
-    margin:0;
-    padding:5px;
-    border:0;
+    margin:5px;
+    padding:0px;
+    border:2px solid #ACCFCC;
     display:inline-block;
+    }
+
+.deletedsong {
+    color:green;
+    font-style:italic;
+    font-weight:bold;
     }
 
 h1 {
@@ -83,9 +89,12 @@ h2 {
     }
 
 #content {
+    width:1240px;
+    clear:both;
     background:#B8AE9C;
-    margin-top:10px;
     display:inline-block;
+    margin-top:10px;
+    padding-top:5px;
     }
 
 #footer {
@@ -94,6 +103,8 @@ h2 {
     color:#ACCFCC;
     margin-top:5px;
     }
+
+/* Navigation Bar */
 
 .level1 {
     border-bottom: 1px solid #ccc;
@@ -120,3 +131,131 @@ h2 {
 .level1 a:hover { color: #f00; }
 
 .level1 ul a:hover { color: #f00 !important; }
+
+
+/* Details View */
+
+.cssdetailsview {
+    background-color:#fff;
+    margin:5px 0 10px 0;
+    border:solid 1px #525252;
+    border-collapse:separate; 
+    text-align:center;
+    font-variant:small-caps;
+    }
+
+.cssdetailsview .header td {
+    padding:4px 2px;
+    color:#ffffff;
+    background:#8A0917;
+    border-left:solid 1px #525252;
+    text-align:center;
+    }
+
+.cssdetailsview th {
+    padding:10px;
+    border:solid 1px #c1c1c1;
+    text-align:center;
+    background-color:#8A0917;
+    }
+
+.cssdetailsview td {
+    padding:4px 2px;
+    border:solid 1px #525252;
+    color:#696969;
+    text-align:left;
+    }
+
+.cssdetailsview .fieldheader {
+    color:#696969;
+    width:150px;
+    text-align:center;
+    }
+
+.cssdetailsview .field{
+    color:#696969;
+    width:150px;
+    text-align:left;
+    }
+
+.cssdetailsview .command {
+    background:#8A0917;
+    line-height:20px;
+    text-align:center;
+    }
+
+.cssdetailsview .command td {
+    text-align:center;
+    }
+
+.cssdetailsview .command a {
+    color:#ffffff;
+    text-decoration:none;
+    }
+
+.cssdetailsview .command a:hover {
+    color:#ffffff;
+    text-decoration:underline;
+    }
+
+/* Gride View */
+
+.cssgridview {
+    width:100%;
+    background-color:#fff;
+    margin:5px 0 10px 0px;
+    border: solid 1px #525252;
+    border-collapse:collapse;
+    text-align: center;
+    font-variant:small-caps;
+    }
+
+.cssgridview td {
+    padding:10px;
+    color:#696969;
+    border: solid 1px #c1c1c1;
+    }
+
+.cssgridview th {
+    padding:4px 2px;
+    color:#696969;
+    background:#8A0917;
+    border-left:solid 1px #525252;
+    }
+
+.cssgridview th a {
+    text-decoration:none;
+    color:white;
+    }
+
+.cssgridview th a:hover {
+    text-decoration:underline;
+    color:white;
+    }
+
+.cssgridview .pgr { 
+    background: #8A0917; 
+
+    }
+.cssgridview .pgr table { 
+    margin: 5px 0; 
+
+    }
+
+.cssgridview .pgr td { 
+    border-width: 0; 
+    padding: 0 6px; 
+    border-left: solid 1px #666;
+    font-weight: bold; 
+    color: white; 
+    line-height: 12px; 
+
+    }
+
+.cssgridview .pgr a { 
+    color:white;  }
+
+.cssgridview .pgr a:hover { 
+    color:white; 
+    text-decoration: underline; }
+
